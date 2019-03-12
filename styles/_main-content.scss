@@ -1,0 +1,313 @@
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+}
+
+.head-page {
+  width: 100%;
+  padding: 28px 30px 22px 30px;
+}
+
+.head-page h1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 36px;
+  font-family: "Georgia", serif;
+  color: #2d313d;
+}
+
+h1 > span {
+  padding-right: 10px;
+}
+
+.head-page .select_wrap {
+  width: auto;
+}
+
+.head-page select {
+  font-weight: 400;
+  font-size: 36px;
+  font-family: "Georgia", serif;
+  color: #2d313d;
+}
+
+.head-page .select_wrap span,
+.head-page .select_wrap {
+  height: 36px;
+}
+
+.head-page .select_wrap span::before,
+.head-page .select_wrap span::after {
+  background: #2d313d;
+}
+
+.panel-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 30px;
+
+  background-color: #f2f4f8;
+}
+
+.search-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 280px;
+  margin-right: 30px;
+}
+
+.search-content input {
+  width: 100%;
+  max-width: 280px;
+  height: 40px;
+  padding-left: 10px;
+
+  font-size: 14px;
+  text-align: left;
+  color: #99a1b3;
+
+  background-color: #ffffff;
+  border: 1px solid #d6d9e1;
+  border-radius: 4px;
+}
+
+.search-content .search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 38px;
+  height: 40px;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.search-content .search-btn svg {
+  transition: 0.3s;
+
+  fill: #cacaca;
+}
+
+.search-content .search-btn:active svg,
+.search-content .search-btn:focus svg {
+  fill: #333333;
+}
+
+.panel-buttons button:active svg,
+.panel-buttons button:focus svg,
+.panel-buttons button:active span,
+.panel-buttons button:focus span {
+  color: #333333;
+
+  fill: #333333;
+}
+
+.search-content .search-btn:hover svg,
+.panel-buttons button:hover svg {
+  fill: #333333;
+}
+
+.panel-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 23%;
+}
+
+.panel-buttons button {
+  height: 36px;
+
+  font-size: 14px;
+  font-family: "Georgia", serif;
+  color: #99a1b3;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.panel-buttons button:hover {
+  color: #333333;
+}
+
+.panel-buttons button svg {
+  transition: 0.3s;
+
+  fill: #99a1b3;
+}
+
+.main-content .person-block {
+  flex-grow: 1;
+}
+
+.person-block article {
+  display: flex;
+  padding: 15px 30px;
+}
+
+.user-card-block .card {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #f2f4f8;
+  margin: 5px 14px 5px 0;
+}
+
+.user-name {
+  color: #99a1b3;
+  font-size: 12px;
+}
+
+.user-top-article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-status {
+  border-radius: 4px;
+  background-color: #f2f4f8;
+  display: inline-block;
+  padding: 3px 15px;
+  margin: 0 25px;
+  color: #99a1b3;
+  font-size: 12px;
+}
+
+.activity span {
+  margin-left: 11px;
+  color: #99a1b3;
+  font-size: 12px;
+}
+
+.activity span > svg {
+  margin-right: 3px;
+  fill: #99a1b3;
+}
+
+.title-top-article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.item-title {
+  color: #4f9cd4;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.user-on-off {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+.user-on-off.out {
+  border-radius: 50%;
+  border: 2px solid #fdc041;
+}
+
+.user-on-off.on {
+  border-radius: 50%;
+  border: 2px solid #00FF00;
+}
+
+.user-on-off.off {
+  border: 0;
+}
+
+.content-article-text {
+  color: #333333;
+  font-size: 14px;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.bottom-article {
+  color: #99a1b3;
+  margin-top: 10px;
+}
+
+.bottom-article svg {
+  fill: #99a1b3;
+}
+
+.bottom-article a {
+  color: #99a1b3;
+  font-size: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.bottom-article a:hover {
+  color: #333333;
+}
+
+@media screen and (max-width: 779px) {
+  .head-page h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-content {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .search-content input {
+    visibility: hidden;
+  }
+
+  .search-content {
+    width: 38px;
+  }
+
+  .panel-buttons {
+    width: auto;
+    max-width: unset;
+  }
+
+  .panel-buttons button {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+  }
+
+  .add-item svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .user-status {
+    margin: 0 18px;
+    padding: 3px 7px;
+  }
+
+  .activity span {
+    margin-left: 5px;
+  }
+
+  .user-card-block .card {
+    width: 30px;
+    height: 30px;
+  }
+}

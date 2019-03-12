@@ -1,0 +1,224 @@
+header {
+  flex-shrink: 0;
+  height: 60px;
+
+  background-color: #2d313d;
+}
+
+header .content-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.page-head {
+  flex-grow: 1;
+
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.pull-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.pull-right > * {
+  margin-left: 24px;
+}
+
+.pull-right > a:focus .bem-symbol,
+.pull-right > a:active .bem-symbol,
+.pull-right > a:focus > span,
+.pull-right > a:active > span,
+.search-btn:focus .bem-symbol,
+.search-btn:active .bem-symbol {
+  fill: #ffffff;
+  color: #ffffff;
+}
+
+.select_block {
+  position: absolute;
+
+  width: calc(100% - 20px);
+
+  border-bottom: 1px dashed #727989;
+}
+
+.select_wrap {
+  position: relative;
+  // top: 0;
+  // left: 0;
+
+  // width: 100%;
+  height: 20px;
+}
+
+select {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  padding-right: 20px;
+
+  font-size: 14px;
+  color: #727989;
+
+  background: transparent;
+  border: 0;
+}
+
+.select_wrap select {
+  -webkit-appearance: none;    /* remove arrow Chrome */
+     -moz-appearance: none;       /* remove arrow FF     */
+          appearance: none;            /* remove arrow        */
+}
+
+.select_wrap select::-ms-expand {
+  display: none;             /* remove arrow IE     */
+}
+
+.select_wrap span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+
+  border: 0;
+}
+
+.select_wrap span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+
+  width: 1px;
+  height: 7px;
+  margin-top: -2px;
+
+  background: #727989;
+  transform: rotate(45deg);
+}
+
+.select_wrap span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+
+  width: 1px;
+  height: 7px;
+  margin-top: -2px;
+
+  background: #727989;
+  transform: rotate(-45deg);
+}
+
+.span-icon .bem-symbol {
+  transition: 0.3s;
+
+  fill: #727989;
+}
+
+.span-icon:hover .bem-symbol {
+  cursor: pointer;
+
+  fill: #ffffff;
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.user-block span {
+  display: block;
+  min-width: 70px;
+  margin-right: 11px;
+
+  font-size: 14px;
+  color: #727989;
+
+  transition: 0.3s;
+}
+
+.user-block:hover > span {
+  color: #ffffff;
+}
+
+.user-block .card {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.card img {
+  width: auto;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  // dont use object-fit ei11
+}
+
+.search-head {
+  position: relative;
+
+  display: flex;
+  height: 100%;
+}
+
+.search-head input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+
+  height: 30px;
+  padding: 0 5px;
+
+  background-color: #ffffff;
+  border: 1px solid #727989;
+
+  transition: 0.3s;
+}
+
+// .search-head.active input {
+//   top: 60px;
+//   z-index: 1;
+// }
+
+.search-btn {
+  align-self: center;
+
+  background-color: transparent;
+  border: 0;
+}
+
+@media screen and (max-width: 779px) {
+  header {
+    height: 50px;
+  }
+
+  .logo-area {
+    margin-left: 45px;
+  }
+
+  .pull-right {
+    flex-grow: 1;
+  }
+}
